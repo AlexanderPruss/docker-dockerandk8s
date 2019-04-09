@@ -2,6 +2,10 @@
 
 A docker image containing both docker and kubernetes. Used by the author to run k8s inside a Jenkins pipeline with the Jenkins-Kubernetes plugin.
 
+# Tags
+
+* `latest`, `1.6.4` - kubectl v1.6.4, docker v18
+
 # Usage
 
 This image extends a docker image and adds an executable `kubectl`. `kubectl` still needs to be configured, however. You'll need
