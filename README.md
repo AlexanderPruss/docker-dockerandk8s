@@ -1,5 +1,7 @@
 # docker-dockerandk8s
 
+https://hub.docker.com/r/alexpruss/dockerandkubectl
+
 A docker image containing both docker and kubernetes. Used by the author to run k8s inside a Jenkins pipeline with the Jenkins-Kubernetes plugin.
 
 # Tags
@@ -28,12 +30,17 @@ Assuming you're using the Jenkins k8s plugin, with your config file saved in Jen
 Assuming your configuration is in a file called `kubeconfig`:
 
 In one terminal:
+
 `docker pull alexpruss/dockerandkubectl:1.6.4`
+
 `docker run -it alexpruss/dockerandkubectl:1.64`
 
 In a second terminal:
+
 `docker ps` (find the container id)
+
 `docker cp kubeconfig $containerId:~/.kube/config`
 
 In the first terminal again:
+
 `kubectl get pods` (or whatever command you want)
